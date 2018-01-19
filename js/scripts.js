@@ -1,17 +1,18 @@
+function robo(person) {
+  var beep = [0-9]
+  var boop [0]
+  if (person === "1") {
+    return "boop"
+    ('#answer').show();
+  }
+}
+
+
+
+
+
 $(document).ready(function() {
-  $("#beep").submit(function(event) {
-
-
-    var beep = ["robo"];
-
-    {
-       var userInput = $("input#" + beep).val();
-       $("." + beep).text(userInput);
-     }
-
-
-   $("#result").show();
-
+  $("#form").submit(function(event) {
    event.preventDefault();
  });
 });
