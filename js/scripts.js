@@ -1,5 +1,6 @@
 function piglatin(userInput) {
 
+
   //Any characters from A-Z cannot communicate with the robot
   if (userInput.match(/[1-9]/i)) {
 
@@ -21,6 +22,8 @@ function piglatin(userInput) {
 
       }
    }
+
+
 $(document).ready(function() {
   var newArray = [];
   $("#userInput").submit(function(event) {
@@ -28,11 +31,27 @@ $(document).ready(function() {
     for (i=0; i<userInput1.length; i++) {
       newArray.push(piglatin(userInput1[i]));
     }
-
-    //the beep boops will pop-up
-
     $("#answers").text(newArray.join(""));
       event.preventDefault();
 
-    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
 });
