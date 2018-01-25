@@ -1,10 +1,6 @@
 # BEEP boop
 
-####,0,1 and 3' display a message of beep boops
-
-####Done by Ivan Ramos
-
-###Setup/Installation Requirements
+### Setup/Installation Requirements
 Open GitHub
 Clone Project from https://www.github.com/ivanramos148
 Open up project in HTML editor
