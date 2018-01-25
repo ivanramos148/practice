@@ -1,27 +1,24 @@
-# _{BEEP boop}_
+# BEEP boop
 
-#### _{,0,1 and 3' display a message of beep boops}_
+####,0,1 and 3' display a message of beep boops
 
-#### By _**{Done by Ivan Ramos}**_
+####Done by Ivan Ramos
 
-## Description
+###Setup/Installation Requirements
+Open GitHub
+Clone Project from https://www.github.com/ivanramos148
+Open up project in HTML editor
 
-_{it changes numbers to characters }_
+## SPECS
+ 0 will return as the result 'BOOP', 1 will return as 'beep, boop'
+ numbers higher than that will return with boop along with digits
 
-## Known Bugs
-
-_{none so far}_
-
-## Support and contact details
-
-_{Please contact me if you run into more issues.}_
+ ex: (input)4 = (result)"beep,boop.,2,I'm sorry, Dave. I'm afraid I can't do that,4"
 
 ## Technologies Used
 
-_{Javascript, bootstrap, CSS styling, HTML editor "Atom" }_
+Javascript, bootstrap, CSS styling, HTML editor "Atom"
 
 ### License
-
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
 
 Copyright (c) 2017 **_{Ivan Ramos}_**

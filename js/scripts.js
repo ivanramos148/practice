@@ -1,57 +1,25 @@
-function piglatin(userInput) {
-
-
-  //Any characters from A-Z cannot communicate with the robot
-  if (userInput.match(/[1-9]/i)) {
-
-    //if user inputs thge 1 the out come will be boop
-  }if (userInput === "1") {
-      userInput = "boop";
-      return userInput;
-
-    //if the first letter constant piglatinify it
-  }  else if (userInput === "0") {
-    userInput = "beep"
-    return userInput;
+//Business Logic
+  function beep(number) {
+    var newArray= [];
+    for(var i=0; i <= number; i++) {
+      if (i.toString().includes("1"))
+        newArray.push("boop.")
+      else if (i.toString().includes("0"))
+        newArray.push("beep");
+      else if (i % 3 === 0)
+        newArray.push("I'm sorry, Dave. I'm afraid I can't do that");
+      else
+        newArray.push(i)
   }
+  return newArray;
+}
 
-    //Robot doesnt like that action
-     else if (userInput % 3 === 0) {
-       userInput = "I'm sorry, Dave. I'm afraid I can't do that"
-       return userInput
-
-      }
-   }
-
-
+//User Interface
 $(document).ready(function() {
-  var newArray = [];
   $("#userInput").submit(function(event) {
-    var userInput1 = $("#userInput1").val().toLowerCase().split(/\b/);
-    for (i=0; i<userInput1.length; i++) {
-      newArray.push(piglatin(userInput1[i]));
-    }
-    $("#answers").text(newArray.join(""));
-      event.preventDefault();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
-
+    event.preventDefault();
+    var userInput1 = $("#userInput1").val()
+    var answers = beep(userInput1);
+    $("#answers").text(answers);
+  });
 });
