@@ -1,25 +1,45 @@
-//Business Logic
-  function beep(number) {
-    var newArray= [];
-    for(var i=0; i <= number; i++) {
-      if (i.toString().includes("1"))
-        newArray.push("boop.")
-      else if (i.toString().includes("0"))
-        newArray.push("beep");
-      else if (i % 3 === 0)
-        newArray.push("I'm sorry, Dave. I'm afraid I can't do that");
-      else
-        newArray.push(i)
-  }
-  return newArray;
+function diceRoll() {
+  return Math.floor(Math.random() * 6 + 1);
 }
 
+function Player() {
+  this.roll = 0;
+  this.currentScore = 0;
+  this.permaScore = 0;
+}
+Player.prototype.playerRoll = function() {
+  if (this.roll == 1) {
+    this.currentScore = 0;
+  } else {
+    this.currentScore += this.roll;
+  }
+}
+Player.prototype.playerHold = function() {
+  this.permaScore += this.currentScore
+  this.currentScore = 0
+  // $('#playerOneRoll').fadeOut();
+}
+Player.prototype.winChecker = function() {
+  if(this.permaScore >= 100){
+    alert('you win!');
+  }
+}
 //User Interface
 $(document).ready(function() {
-  $("#userInput").submit(function(event) {
+  var playerOne = new Player
+  var playerTwo = new Player
+  $("#playerOneRoll").submit(function(event) {
+    $("#answers").empty('');
     event.preventDefault();
-    var userInput1 = $("#userInput1").val()
-    var answers = beep(userInput1);
-    $("#answers").text(answers);
+    playerOne.roll = diceRoll();
+    playerOne.playerRoll();
+    $("#answers").append(playerOne.currentScore + ' ' + playerOne.roll)
+  });
+  $("#playerOneHold").submit(function(event) {
+    $("#playerHold").empty('')
+    event.preventDefault();
+    playerOne.playerHold();
+    playerOne.winChecker();
+    $("#playerHold").append(playerOne.permaScore)
   });
 });
