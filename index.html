@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>robot</title>
-  </head>
-  <body>
-    <div class="container">
-        <div class="jumbotron">
-          <h1>Template</h1>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pig Dice Game</title>
+</head>
+<body>
+  <div class="container">
+    <center>
+      <div class="jumbotron">
+        <h1>Pig Dice Game</h1>
+      </div>
+
+      <form id="formOne">
+        <input id="player1" type="text" class="form-control" required="true" placeholder="Player One"><br>
+        <input id="player2" type="text" class="form-control" required="true" placeholder="Player Two"><br>
+        <button type="submit" class="btn btn-warning">Submit</button>
+      </form><br><br>
+
       <form id="playerOneRoll">
-        <button type="submit" class='btn btn-primary'>Roll</button>
+        <button type="submit" class='btn btn-primary'>Roll</button><br><br>
       </form>
+
       <form id="playerOneHold">
-        <button type="submit" class="btn btn-alert">Hold</button>
+        <button type="submit" class="btn btn-alert">Hold</button><br><br>
       </form>
-      <br>
-        <h2 id='playerHold'></h2>
-        <h3 id="answers"></h3>
-    </div>
-  </body>
+
+      <form id="playerTwoRoll">
+        <button type="submit" class="btn btn-danger">Roll</button><br><br>
+      </form>
+
+      <form id="playerTwoHold">
+        <button type="submit" class="btn btn-alert">Hold</button><br><br>
+      </form>
+
+      <h2 id="playerOneName"></h2>
+      <h4 id="playerOneResults"></h4>
+      <h4 id='playerOnePerma'></h4>
+
+      <h2 id="playerTwoName"></h2>
+      <h4 id="playerTwoResults"></h4>
+      <h4 id='playerTwoPerma'></h4>
+    </center>
+  </div>
+</body>
 </html>
